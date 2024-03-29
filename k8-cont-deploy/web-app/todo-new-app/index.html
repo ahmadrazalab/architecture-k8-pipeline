@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Docker Task Tracker</title>
+    <style>
+	body {
+    font-family: 'Your Chosen Font', Arial, sans-serif; /* Specify your chosen font here */
+    background-image: url('background.webp'); 
+    background-size: cover; /* Adjust to your preferred image size */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+       
+
+        /* h1 {
+            color: #fff;
+            margin-top: 20px;
+            margin-right: 750px;
+        } */
+
+          
+form {
+    /* background-image: url('form-background.jpg'); Replace with your image path */
+    background-size: cover; /* Adjust to your preferred image size */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-right: 900px;
+}
+
+
+
+
+
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #27ae60; /* Change the button color to your preferred color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1e8449; /* Change the button hover color */
+        }
+
+        .task-list {
+            max-width: 334px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1px;
+            margin-right: 983px;
+        }
+
+        .task-item {
+	    color: black;	
+            margin-bottom: 1px;
+            font-size: .8em;
+        }
+
+        .aa{
+            font-size: 5em;
+        }
+
+        .delete-button {
+            background-color: #e74c3c; 
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b; 
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    .add-task {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    
+    
+    <form id="taskForm">
+        <div class="container">
+            <h1>To-Do List</h1>
+        <label for="employeeName">Your Name</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+
+        <label for="taskDescription">TASK Description</label>
+        <textarea id="taskDescription" name="taskDescription" rows="4" required></textarea>
+
+        <label for="taskDate">Task Date:</label>
+        <input type="date" id="taskDate" name="taskDate" required><br><br>
+
+        <input type="submit" value="Submit">
+    </div>
+    </form>
+
+    <div class="task-list" id="taskList">
+        <h2>Today's Tasks</h2>
+        <ul id="taskList"></ul>
+        <!-- Task list will be displayed here dynamically -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

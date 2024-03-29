@@ -1,0 +1,23 @@
+##
+stages:
+  - test  # test/fetch the code (default)
+  - scan  # scan the code with sonar scanner (sonar scanner)
+  - build   # build the code using docker build (jenkins)
+  - push    # push the docker image to dockerhub (jenkins)
+  - deploy  # deploy the docker image to k8 server (jenkins/ansible/terraform)
+  - monitor # monitor or verify the web page status (prometheus/grafana)
+          
+
+
+
+
+
+
+
+# cicd variables 
+# docker username and passsword 
+# sonar scan varialbe 
+# deploy to server username and ip and password or using as a jenkins node server 
+
+
+

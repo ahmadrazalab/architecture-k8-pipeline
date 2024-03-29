@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: two-tier-app-service  ## name of the server # useful 
+spec:
+  selector:
+    app: two-tier-app
+  ports:
+    - protocol: TCP
+      port: 80    # service or ssvc port  to pin with pod
+      targetPort: 80 # container internal port exposed
+      nodePort: 30005        # (default: 30000-32767) external port to public or for load balancer
+  type: NodePort
