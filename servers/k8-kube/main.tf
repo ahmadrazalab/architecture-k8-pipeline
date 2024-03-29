@@ -1,7 +1,7 @@
 provider "aws" {
   region = "ap-south-1" # Change this to your desired AWS region
-  access_key  = "<test>"
-  secret_key  = "<test>"
+  access_key  = ""
+  secret_key  = ""  
 }
 
 # MASTER NODE SETUP
@@ -38,8 +38,8 @@ resource "aws_instance" "node1" {
 
 # provider "aws" {
 #   region = "ap-south-1" # Change this to your desired AWS region
-#   access_key  = "test"
-#   secret_key  = "test"
+#   access_key  = ""
+#   secret_key  = ""
 # }
 # resource "aws_instance" "minicube" {
 #   ami           = "ami-0287a05f0ef0e9d9a" # Replace with your desired AMI ID
